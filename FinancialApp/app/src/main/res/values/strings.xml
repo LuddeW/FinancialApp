@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FinancialApp</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_landing">LandingActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string-array name="expence_array">
+        <item>Food</item>
+        <item>Travel</item>
+        <item>Leisure</item>
+        <item>Accomodation</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="income_array">
+        <item>Salary</item>
+        <item>Other</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
