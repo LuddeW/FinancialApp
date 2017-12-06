@@ -62,7 +62,7 @@ public class TransactionFragment extends android.support.v4.app.Fragment {
                 //String s = new String(transactions.get(i).getDate());
                 transactionText.add(transactionArray[i].getDate());
             }
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity().getApplicationContext(), transactionText.size());
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1);
             adapter.addAll(transactionText);
             transactionList.setAdapter(adapter);
         }
