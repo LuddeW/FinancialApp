@@ -9,10 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import TransactionDB.DatabaseHelper;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button next;
     private EditText editTextFirstName;
     private EditText editTextLastName;
+    private DatabaseHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         next = (Button) findViewById(R.id.btnNext);
         editTextFirstName = (EditText) findViewById(R.id.firstName);
         editTextLastName = (EditText) findViewById(R.id.lastName);
+        dbHelper = new DatabaseHelper(getApplicationContext());
+        //dbHelper.deleteAllTransactions();
     }
 
     private void setListeners(){

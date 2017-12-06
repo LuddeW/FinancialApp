@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,9 +14,58 @@
         android:text=""
         android:textSize="25dp" />
 
+    <TextView
+        android:id="@+id/AmountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textSize="15dp"
+        android:layout_below="@+id/WelcomeText"
+        android:layout_alignParentStart="true" />
+
     <ListView
         android:id="@+id/TransactionList"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/AmountText"
+        android:layout_alignParentStart="true" />
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Date YYYYMMDD"
+        android:gravity="center"
+        android:layout_below="@+id/TransactionList"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/DateSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:gravity="center"
+        android:layout_below="@+id/Date"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/Income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Income"
+        android:layout_below="@+id/Date"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/Expence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expense"
+        android:layout_below="@+id/Date"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

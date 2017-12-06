@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.ludwig.financialapp.R;
 
@@ -52,9 +53,10 @@ public class IncomeFragment extends android.support.v4.app.Fragment implements V
     @Override
     public void onClick(View view) {
         Transaction t = new Transaction();
-        t.setType("Income");
-        t.setAmount(incomeAmount.getText().toString());
-        t.setDate(incomeDate.getText().toString());
+        t.setType(mSpinner.getSelectedItem().toString());
+        t.setAmount(Integer.parseInt(incomeAmount.getText().toString()));
+        t.setDate(Integer.parseInt(incomeDate.getText().toString()));
         dbHelper.addTransaction(t);
+        Toast.makeText(getContext(),"Sent!" , Toast.LENGTH_SHORT).show();
     }
 }

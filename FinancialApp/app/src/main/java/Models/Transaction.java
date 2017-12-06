@@ -9,8 +9,8 @@ import java.util.Date;
 public class Transaction {
     private int id;
     private String type;
-    private String amount;
-    private String date;
+    private Integer amount;
+    private Integer date;
 
     public int getId(){
         return id;
@@ -27,19 +27,19 @@ public class Transaction {
         this.type = type;
     }
 
-    public String getAmount(){
+    public Integer getAmount(){
         return amount;
     }
 
-    public void setAmount(String amount){
+    public void setAmount(Integer amount){
         this.amount = amount;
     }
 
-    public String getDate(){
+    public Integer getDate(){
         return date;
     }
 
-    public void setDate(String date){
+    public void setDate(Integer date){
         this.date = date;
     }
 
